@@ -15,7 +15,7 @@ Try to find which Pokémon is hiding under the silhouette, write its name in Eng
 
 ## ScreenShot :
 
-![ScreenShot](gitImage/image.png)
+![ScreenShot](gitImages/image.png)
 
 ## GitPage :
 
