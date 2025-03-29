@@ -15,6 +15,9 @@ const Pokemon = ({ pokemon, onGuess }) => {
         setRevealed(false);
         onGuess(true);
       }, 2000);
+    }
+    if (guess.toLocaleLowerCase() === "") {
+      return;
     } else {
       setRevealed(true);
       setMessage(`❌ Wrong it was ${pokemon.name}`);
