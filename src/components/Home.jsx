@@ -1,9 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import fetchFromApi from "../utils/fetch";
+import Pokemon from "./pokemon";
 
 const Home = () => {
   const [currentPokemon, setCurrentPokemon] = useState(null);
-  const isFetched = useRef(false); 
+  const [score, setScore] = useState(0);
+  const handleGuess = (guess) => {
+    if (guess === true) {
+      setScore((prevScore) => prevScore + 1);
+    }
+    fetchPokemon();
+  };
+
+  const isFetched = useRef(false);
   const fetchPokemon = async () => {
     const randomId = Math.floor(Math.random() * 1025) + 1;
     const data = await fetchFromApi(randomId);
@@ -13,26 +22,21 @@ const Home = () => {
   useEffect(() => {
     if (!isFetched.current) {
       fetchPokemon();
-      isFetched.current = true; 
+      isFetched.current = true;
     }
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <h1 className="text-lg">Who's That Pokémon?</h1>
+      <h2 className="text-lg">Score {score}</h2>
       {currentPokemon ? (
-        <div>
-          <h2>{currentPokemon.name}</h2>
-          <img className="brightness-0"
-            src={currentPokemon.sprites.other["official-artwork"].front_default}
-            alt={currentPokemon.name}
-          />
+        <div className="flex flex-col items-center">
+          <Pokemon pokemon={currentPokemon} onGuess={handleGuess} />
         </div>
       ) : (
         <p>Loading...</p>
       )}
-
-
     </div>
   );
 };
