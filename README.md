@@ -17,6 +17,6 @@ Try to find which Pokémon is hiding under the silhouette, write its name in Eng
 
 ![ScreenShot](gitImages/image.png)
 
-## GitPage :
+## Live :
 
-Deploying
+[Live Website with Vercel](https://who-s-that-pokemon-chi.vercel.app/)
