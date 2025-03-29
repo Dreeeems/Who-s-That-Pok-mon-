@@ -6,7 +6,6 @@ const Pokemon = ({ pokemon, onGuess }) => {
   const [revealed, setRevealed] = useState(false);
   const checkAnswer = (event) => {
     event.preventDefault();
-    console.log(guess + " " + pokemon.name);
     if (guess.toLowerCase() === pokemon.name.toLowerCase()) {
       setRevealed(true);
       setMessage("✅ Good Job !!🎉");

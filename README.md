@@ -1,12 +1,22 @@
-# React + Vite
+# Who's That Pokémon ?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Play the popular game to find out which Pokémon is hidden under the silhouette!
 
-Currently, two official plugins are available:
+## Look, Write and Validate !
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Try to find which Pokémon is hiding under the silhouette, write its name in English, and score the most points!
 
-## Expanding the ESLint configuration
+## Technologies :
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Axios for fetching the API
+- Tailwind for styling
+- [PokémonAPI](https://pokeapi.co/) [GitHub Repo](https://github.com/PokeAPI/pokeapi) by Paul Hallett and Pokemon Community
+
+## ScreenShot :
+
+![ScreenShot](gitImage/image.png)
+
+## GitPage :
+
+Deploying
