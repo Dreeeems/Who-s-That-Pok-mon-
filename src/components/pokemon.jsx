@@ -4,9 +4,13 @@ const Pokemon = ({ pokemon, onGuess }) => {
   const [guess, setGuess] = useState("");
   const [message, setMessage] = useState("");
   const [revealed, setRevealed] = useState(false);
+
   const checkAnswer = (event) => {
     event.preventDefault();
-    if (guess.toLowerCase() === pokemon.name.toLowerCase()) {
+    const normalizedGuess = guess.trim().toLowerCase();
+    const normalizedName = pokemon.name.trim().toLowerCase();
+
+    if (normalizedGuess === normalizedName) {
       setRevealed(true);
       setMessage("✅ Good Job !!🎉");
       setGuess("");
@@ -15,12 +19,11 @@ const Pokemon = ({ pokemon, onGuess }) => {
         setRevealed(false);
         onGuess(true);
       }, 2000);
-    }
-    if (guess.toLocaleLowerCase() === "") {
+    } else if (normalizedGuess === "") {
       return;
     } else {
       setRevealed(true);
-      setMessage(`❌ Wrong it was ${pokemon.name}`);
+      setMessage(`❌ Wrong! It was ${pokemon.name}`);
       setGuess("");
       setTimeout(() => {
         setMessage("");
