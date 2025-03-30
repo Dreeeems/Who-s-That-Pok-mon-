@@ -45,7 +45,7 @@ const Home = () => {
                 : "bg-white text-blue-600 hover:bg-blue-600 hover:text-white"
             }`}
           >
-            <img src="../public/Uk.png" alt="English" className="w-6 h-6" />
+            <img src="/Uk.png" alt="English" className="w-6 h-6" />
             <span>En</span>
           </button>
           <button
@@ -56,7 +56,7 @@ const Home = () => {
                 : "bg-white text-blue-600 hover:bg-blue-600 hover:text-white"
             }`}
           >
-            <img src="../public/Fr.png" alt="Français" className="w-6 h-6" />
+            <img src="/Fr.png" alt="Français" className="w-6 h-6" />
             <span>Fr</span>
           </button>
         </div>
